@@ -18,8 +18,9 @@
 
     <span class="d-none alert alert-success mb-3" id="res_message"></span>
 
+    <h3>Edit User Details</h3>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-6">
             <form action="<?php echo base_url('/users/update');?>" name="edit-user" id="edit-user" method="post" accept-charset="utf-8">
 
                 <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $user['id'] ?>">
@@ -37,9 +38,15 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" id="send_form" class="btn btn-success">Submit</button>
+                    <label for="email">Contact No</label>
+                    <input type="text" name="contact_no" class="form-control" id="contact_no" placeholder="Enter your contact no" value="<?php echo $user['contact_no'] ?>">
+
                 </div>
 
+                <div class="form-group">
+                    <button type="submit" id="send_form" class="btn btn-success">Submit</button>
+                    <button type="submit" action="<?php echo base_url('/users');?>" id="" class="btn btn-danger">Cancel</button>
+                </div>
             </form>
         </div>
 
