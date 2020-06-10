@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8000/framework';
+	public $baseURL = 'http://localhost:8000/Curd_in_Codelgniter_4';
 
 	/*
 	|--------------------------------------------------------------------------
