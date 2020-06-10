@@ -63,6 +63,7 @@ class Users extends Controller
             'name' => $this->request->getVar('name'),
             'email'  => $this->request->getVar('email'),
             'contact_no' => $this->request->getVar('contact_no'),
+            'username'  => $this->request->getVar('username'),
         ];
 
         $save = $model->update($id,$data);

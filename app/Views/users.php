@@ -48,9 +48,6 @@
             <?php endif; ?>
             </tbody>
         </table>
-        <!-- Button to Open the Modal -->
-
-        <!-- The Modal -->
         <!-- The Modal -->
         <div class="modal" id="myModal">
             <div class="modal-dialog">
@@ -71,18 +68,18 @@
                                     <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $user['id'] ?>">
 
                                     <div class="form-group">
-                                        <label for="formGroupExampleInput">Name</label>
-                                        <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Please enter name" value="<?php echo $user['name'] ?>">
+                                        <label for="formGroupExampleInput"><h5>Name</h5></label>
+                                        <input type="text" readonly class="form-control-plaintext" name="name"  id="formGroupExampleInput" placeholder="Please enter name" value="<?php echo $user['name'] ?>">
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email Id</label>
-                                        <input type="text" name="email" class="form-control" id="email" placeholder="Please enter email id" value="<?php echo $user['email'] ?>">
+                                        <label for="email"><h5>Email Id</h5></label>
+                                        <input type="text" name="email" class="form-control-plaintext" id="email" placeholder="Please enter email id" value="<?php echo $user['email'] ?>">
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Contact No</label>
-                                        <input type="text" name="contact_no" class="form-control" id="contact_no" placeholder="Enter your contact no" value="<?php echo $user['contact_no'] ?>">
+                                        <label for="email"><h5>Contact No</h5></label>
+                                        <input type="text" name="contact_no" class="form-control-plaintext" id="contact_no" placeholder="Enter your contact no" value="<?php echo $user['contact_no'] ?>">
 
                                     </div>
                                 </form>

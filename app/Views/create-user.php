@@ -19,7 +19,7 @@
     <span class="d-none alert alert-success mb-3" id="res_message"></span>
 
     <div class="row">
-        <div class="col-md-6 mt-5">
+        <div class="col-md-5 mt-5">
             <form action="<?php echo base_url('/users/store');?>" name="user_create" id="user_create" method="post" accept-charset="utf-8">
                 <h2>Adding New User</h2>
                 <div class="form-group">
@@ -41,14 +41,47 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Please enter username">
+
+                </div>
+
+                <div class="form-group">
                     <button type="submit" id="send_form" class="btn btn-success">Submit</button>
                 </div>
             </form>
         </div>
-
     </div>
-
 </div>
+<script>
+    if ($("#user_create").length > 0) {
+        $("#user_create").validate({
+
+            rules: {
+                name: {
+                    required: true,
+                },
+
+                email: {
+                    required: true,
+                    maxlength: 50,
+                    email: true,
+                },
+            },
+            messages: {
+
+                name: {
+                    required: "Please enter name",
+                },
+                email: {
+                    required: "Please enter valid email",
+                    email: "Please enter valid email",
+                    maxlength: "The email name should less than or equal to 50 characters",
+                },
+            },
+        })
+    }
+</script>
 <!--<div class="container">-->
 <!--    <h2>Adding New User</h2>-->
 <!--    <form action="--><?php //echo base_url('/users/store');?><!--" name="user_create" id="user_create" method="post" accept-charset="utf-8" class="needs-validation" novalidate>-->
@@ -158,34 +191,6 @@
 <!--        }, false);-->
 <!--    })();-->
 <!--</script>-->
-<script>
-    if ($("#user_create").length > 0) {
-        $("#user_create").validate({
 
-            rules: {
-                name: {
-                    required: true,
-                },
-
-                email: {
-                    required: true,
-                    maxlength: 50,
-                    email: true,
-                },
-            },
-            messages: {
-
-                name: {
-                    required: "Please enter name",
-                },
-                email: {
-                    required: "Please enter valid email",
-                    email: "Please enter valid email",
-                    maxlength: "The email name should less than or equal to 50 characters",
-                },
-            },
-        })
-    }
-</script>
 </body>
 </html>
